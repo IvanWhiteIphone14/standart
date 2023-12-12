@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+
+    <loc>https://{REPLACE_URL}/</loc>
+
+    <lastmod>2023-09-29</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+        <url>
+
+        <loc>https://{REPLACE_URL}/</loc>
+
+        <lastmod>2023-09-29</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.0</priority>
+
+        </url>
+
+        <url>
+
+        <loc>https://{REPLACE_URL}/website-layout-from-scratch.html</loc>
+
+        <lastmod>2023-09-29</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.0</priority>
+
+        </url>
+
+        <url>
+
+        <loc>https://{REPLACE_URL}/creating-corporate-website-for-the-company.html</loc>
+
+        <lastmod>2023-09-29</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.0</priority>
+
+        </url>
+
+        <url>
+
+        <loc>https://{REPLACE_URL}/cozdanie-landing-page-odnostranichnogo-sayta.html</loc>
+
+        <lastmod>2023-09-29</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.0</priority>
+
+        </url>
+
+        <url>
+
+        <loc>https://{REPLACE_URL}/crm-development-for-an-online-store-and-small-business.html</loc>
+
+        <lastmod>2023-09-29</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.0</priority>
+
+        </url>
+
+        <url>
+
+        <loc>https://{REPLACE_URL}/creation-of-an-internet-portal.html</loc>
+
+        <lastmod>2023-09-29</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.0</priority>
+
+        </url>
+    </urlset>

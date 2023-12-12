@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="files/script-js/1.12.4.jquery.min.js"></script>
+    <title>Contacts</title>
+    <meta property="og:title" content="Contacts" />
+    <meta property="og:image" content="logotip.svg" />
+
+    <meta property="og:description" content="Contacts" />
+    <meta name="description" content="Contacts" />
+
+    <link rel="stylesheet" href="files/style-css/button.css" />
+    <link rel="stylesheet" href="files/style-css/bootstrap.css" />
+    <link rel="stylesheet" href="files/style-css/bootstrap.css.map" />
+    <link rel="stylesheet" href="files/style-css/icons.css" />
+    <link rel="shortcut icon" href="logotip.svg" type="image/x-icon" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+      html{
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body{
+        margin: 0;
+        padding: 0;
+        direction: ltr;
+        font-family: 'Montserrat', sans-serif !important;
+      }
+
+      img{
+        max-width: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .contact-header-lay{
+        background-color: #060930;
+      }
+
+      .contact-header-lay svg{
+        position: relative;
+        bottom: -4px;
+      }
+
+      .contact-header {
+        display: flex;
+        align-items: center;
+        padding: 36px 0;
+        justify-content: center;
+      }
+
+      .contact-header h1{
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .kontact-form{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 15px;
+        margin: 36px 0;
+        display: flex;
+        padding: 36px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .form-check a{
+        border-bottom: 1px solid;
+        transition: 0.5s ease;
+        color: black;
+      }
+
+      .form-check a:hover{
+        color: grey;
+      }
+
+      .title-kontact-form h2{
+        text-align: start;
+        font-weight: bold;
+      }
+
+      .title-kontact-input{
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+      }
+
+      .title-kontact-input .submit{
+        margin: 0 auto;
+        width: auto;
+      }
+
+      .title-kontact-input .inputs-kontact, .title-kontact-input .textarea-kontact, .title-kontact-input button {
+        outline: none;
+        border: 1px solid #f6f6f6;
+        margin: 8px 0;
+      }
+
+      .title-kontact-input .inputs-kontact {
+        background-color: white;
+        padding: 1rem;
+        padding-right: 3rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: 0px 2px 7.68px 0.32px rgba(13, 13, 13, 0.05);
+      }
+
+      .title-kontact-input .textarea-kontact {
+        background-color: white;
+        padding: 1rem;
+        padding-right: 3rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: 0px 2px 7.68px 0.32px rgba(13, 13, 13, 0.05);
+      }
+
+      .card-contact-box{
+        padding: 36px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        flex-direction: row;
+      }
+
+      .card-contact{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        transition: transform 1s ease;
+        transform: scale(1);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 15px;
+        padding: 23px;
+        flex: 1;
+      }
+
+      .card-contact:hover{
+        transform: scale(1.05);
+      }
+
+      .card-contact h5{
+        display: flex;
+        font-weight: bold;
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+        gap: 6px;
+      }
+
+      .card-contact i{
+        color: #EF2143;
+        font-size: 25px;
+      }
+
+      .footer-lay{
+        background-color: #060930;
+      }
+
+      .footer-lay svg{
+        position: relative;
+        top: -4px;
+      }
+
+      .footer{
+        flex-direction: row;
+        gap: 36px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 36px 0;
+      }
+
+      .logo-footer{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .logo-footer-img{
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        flex-direction: column-reverse;
+      }
+
+      .logo-footer-img img{
+        max-width: 110px;
+        margin-right: 15px;
+      }
+
+      .footer-contact {
+        flex: 1;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .kontact-box h5 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .footer-hourse {
+        flex: 1;
+      }
+
+      .opening-hours {
+        flex: 1;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .opening-hours h2 {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-direction: row;
+        font-size: 23px;
+        margin-bottom: 15px;
+      }
+
+      .footer-horse{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 26px;
+      }
+
+      .opening-hours h4 {
+        font-size: 18px;
+      }
+
+      @media (max-width: 991px) {
+        .card-contact-box{
+          flex-direction: column-reverse;
+        }
+
+        .footer{
+          align-items: center;
+          text-align: center;
+          flex-direction: column-reverse;
+        }
+
+        .kontact-form{
+          padding: 36px 15px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .card-contact h5{
+          flex-direction: column;
+        }
+      }
+
+      {random_style}
+    </style>
+  </head>
+
+  <body>
+    <div class="contact-header-lay">
+      <div class="container">
+        <div class="contact-header"><h1>&#8212; Contacts &#8212;</h1></div>
+      </div>
+      <svg
+        id="wave"
+        style="transform: rotate(0deg); transition: 0.3s"
+        viewBox="0 0 1440 100"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          style="transform: translate(0, 0px); opacity: 1"
+          fill="#fff"
+          d="M0,30L60,40C120,50,240,70,360,66.7C480,63,600,37,720,36.7C840,37,960,63,1080,65C1200,67,1320,43,1440,43.3C1560,43,1680,67,1800,66.7C1920,67,2040,43,2160,33.3C2280,23,2400,27,2520,28.3C2640,30,2760,30,2880,38.3C3000,47,3120,63,3240,70C3360,77,3480,73,3600,65C3720,57,3840,43,3960,35C4080,27,4200,23,4320,21.7C4440,20,4560,20,4680,28.3C4800,37,4920,53,5040,58.3C5160,63,5280,57,5400,50C5520,43,5640,37,5760,41.7C5880,47,6000,63,6120,68.3C6240,73,6360,67,6480,66.7C6600,67,6720,73,6840,75C6960,77,7080,73,7200,61.7C7320,50,7440,30,7560,28.3C7680,27,7800,43,7920,53.3C8040,63,8160,67,8280,65C8400,63,8520,57,8580,53.3L8640,50L8640,100L8580,100C8520,100,8400,100,8280,100C8160,100,8040,100,7920,100C7800,100,7680,100,7560,100C7440,100,7320,100,7200,100C7080,100,6960,100,6840,100C6720,100,6600,100,6480,100C6360,100,6240,100,6120,100C6000,100,5880,100,5760,100C5640,100,5520,100,5400,100C5280,100,5160,100,5040,100C4920,100,4800,100,4680,100C4560,100,4440,100,4320,100C4200,100,4080,100,3960,100C3840,100,3720,100,3600,100C3480,100,3360,100,3240,100C3120,100,3000,100,2880,100C2760,100,2640,100,2520,100C2400,100,2280,100,2160,100C2040,100,1920,100,1800,100C1680,100,1560,100,1440,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="container">
+      <form action="thx.html" method="post" class="kontact-form">
+        <div class="title-kontact-form">
+          <h2>Contact us</h2>
+        </div>
+        <div class="title-kontact-input">
+          <input type="text" class="inputs-kontact" placeholder="Enter your name" required />
+          <span></span>
+          <input type="tel" class="inputs-kontact" placeholder="Enter your phone number" required />
+          <span></span>
+          <input type="email" class="inputs-kontact" placeholder="E-mail address" required />
+          <span></span>
+          <textarea
+            class="textarea-kontact"
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkbox" required />
+            <label class="form-check-label" for="checkbox"
+              >I accept <a href="privacy_policy.html" class="check">Privacy policy</a></label
+            >
+          </div>
+          <button class="submit button-5">Send a message</button>
+        </div>
+      </form>
+    </div>
+
+    
+    <iframe
+      src="https://maps.google.com/maps?hl=en&q={maps-marketland}&ie=UTF8&t=&z=8&iwloc=B&output=embed"
+      width="100%"
+      height="362"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+
+    
+
+     <div class="container">
+      <div class="card-contact-box">
+        <div class="card-contact">
+          <h5><i class="bi bi-map-fill"></i>  9168 Gaither Rd, Gaithersburg, MD 20877</h5>
+        </div>
+        <div class="card-contact">
+          <h5><i class="bi bi-headset"></i> (479) 750-2805</h5>
+        </div>
+        <div class="card-contact">
+          <h5><i class="bi bi-envelope-fill"></i> our_mail_literate@mail.us</h5>
+        </div>
+      </div>
+    </div>  
+
+    <div class="footer-lay">
+      <svg
+        id="wave"
+        style="transform: rotate(180deg); transition: 0.3s"
+        viewBox="0 0 1440 100"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          style="transform: translate(0, 0px); opacity: 1"
+          fill="#fff"
+          d="M0,30L60,40C120,50,240,70,360,66.7C480,63,600,37,720,36.7C840,37,960,63,1080,65C1200,67,1320,43,1440,43.3C1560,43,1680,67,1800,66.7C1920,67,2040,43,2160,33.3C2280,23,2400,27,2520,28.3C2640,30,2760,30,2880,38.3C3000,47,3120,63,3240,70C3360,77,3480,73,3600,65C3720,57,3840,43,3960,35C4080,27,4200,23,4320,21.7C4440,20,4560,20,4680,28.3C4800,37,4920,53,5040,58.3C5160,63,5280,57,5400,50C5520,43,5640,37,5760,41.7C5880,47,6000,63,6120,68.3C6240,73,6360,67,6480,66.7C6600,67,6720,73,6840,75C6960,77,7080,73,7200,61.7C7320,50,7440,30,7560,28.3C7680,27,7800,43,7920,53.3C8040,63,8160,67,8280,65C8400,63,8520,57,8580,53.3L8640,50L8640,100L8580,100C8520,100,8400,100,8280,100C8160,100,8040,100,7920,100C7800,100,7680,100,7560,100C7440,100,7320,100,7200,100C7080,100,6960,100,6840,100C6720,100,6600,100,6480,100C6360,100,6240,100,6120,100C6000,100,5880,100,5760,100C5640,100,5520,100,5400,100C5280,100,5160,100,5040,100C4920,100,4800,100,4680,100C4560,100,4440,100,4320,100C4200,100,4080,100,3960,100C3840,100,3720,100,3600,100C3480,100,3360,100,3240,100C3120,100,3000,100,2880,100C2760,100,2640,100,2520,100C2400,100,2280,100,2160,100C2040,100,1920,100,1800,100C1680,100,1560,100,1440,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"
+        ></path>
+      </svg>
+      <div class="container">
+        <div class="footer">
+          <div class="logo-footer">
+            <div class="logo-footer-img">
+              <img src="visa-logo.svg" alt="" />
+              <img src="ppcom.svg" alt="" />
+              <img src="mastercard-logo.svg" alt="" />
+            </div>
+          </div>
+          
+          <div class="footer-contact">
+            <div class="kontact-box">
+              <h5> 9168 Gaither Rd, Gaithersburg, MD 20877</h5>
+            </div>
+            <div class="kontact-box">
+              <h5>(479) 750-2805</h5>
+            </div>
+            <div class="kontact-box">
+              <h5>our_mail_literate@mail.us</h5>
+            </div>
+          </div>
+          
+          <div class="footer-hourse">
+            <div class="opening-hours">
+              <h2 class="animate-element"><i class="bi bi-clock-fill"></i> Store Opening Hours:</h2>
+              <h4 class="animate-element">Monday - Friday: 7:00 - 19:00</h4>
+              <h4 class="animate-element">Saturday - Sunday: 9:00 - 16:00</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
